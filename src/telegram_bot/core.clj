@@ -11,9 +11,9 @@
 			[cheshire.core :refer :all])	;; json-work
   (:gen-class))
 
-(def bot-token "212982170:AAG6QW1ODhTaISGJVDK9JezaMkAvWUl-WFo")
+(def bot-token "***REMOVED***")
 (def bot-url (str "https://api.telegram.org/bot" bot-token "/"))
-(def my-url "https://frozen-fortress-43072.herokuapp.com/")
+(def my-url "***REMOVED***")
 
 (def chat-id 53941045)	;; default chat id
 	   
@@ -84,7 +84,7 @@
        (route/not-found (slurp (io/resource "404.html")))))
 
 (defn -main [& [port]]
-  (let [port (Integer. (or port (env :port) 5000))]
+  (let [port (Integer. (or port (env :port) 80))]
 	(println (str "Running on port:" port))
 	(init)
     (jetty/run-jetty (site #'app) {:port port :join? false})))
