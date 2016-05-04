@@ -79,7 +79,7 @@
 
 (defroutes app
   (POST "/hook" req
-       (hook-message req))
+       (println "HOOK_MSG") "HELLO BRO") ;; (hook-message req)
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))
 
