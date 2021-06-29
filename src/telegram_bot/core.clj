@@ -11,9 +11,9 @@
 			[cheshire.core :refer :all])	;; json-work
   (:gen-class))
 
-(def bot-token "***REMOVED***")
+(def bot-token "")
 (def bot-url (str "https://api.telegram.org/bot" bot-token "/"))
-(def my-url "***REMOVED***")
+(def my-url "")
 
 (def chat-id 53941045)	;; default chat id
 	   
